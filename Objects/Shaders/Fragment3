@@ -1,0 +1,21 @@
+#version 430
+precision highp float;
+
+layout(binding = 1) uniform sampler2D texture_sampler;
+
+layout(location = 0) in vec2 fragment_texcoord;
+layout(location = 1) in vec3 fragment_light_color;
+
+layout(location = 0) out vec4 fragColor;
+
+void main()
+{
+    vec4 texture_color = texture(texture_sampler, fragment_texcoord);
+
+    if (texture_color.a == 0.0)
+    {
+        discard;
+    }
+
+    fragColor = vec4(texture_color.rgb/* * fragment_light_color * 1.5*/, texture_color.a);
+}

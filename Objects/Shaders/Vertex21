@@ -1,0 +1,5 @@
+temp_vertices_vec4 = vec4(vertices, 1.0);
+// temp_normals_vec4 = vec4(normals, 0.0);
+
+if (joints != -1)
+{
