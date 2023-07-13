@@ -19,6 +19,9 @@ public class Main
     {
         try
         {
+            new File("Objects").mkdirs();
+            new File("Results").mkdirs();
+
             File[] file_array = new File("Objects").listFiles();
 
             for (int i = 0; i < file_array.length; ++i)
