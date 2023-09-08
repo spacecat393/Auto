@@ -6,5 +6,5 @@ cd $results_directory
 
 for item in ./../Shaders/*
 do
-    glslangValidator -V ./../Shaders/$(basename $item) -o $(basename $item).spv
+    glslangValidator -V ./../Shaders/$(basename $item) -o $(basename $item)
 done
